@@ -4,6 +4,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef();
@@ -23,39 +24,16 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    fetch('http://localhost:3001/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(form),
-    }).then((res) => (res.json())
-    ).then((res) => {
-      console.log(res)
-      if (res.status == 'success') {
-        setLoading(false);
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        });
-        formRef.current.reset();
-        alert("Message sent successfully")
-      } else if (res.status == 'fail') {
-        setLoading(false);
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        });
-        formRef.current.reset();
-        alert("Message failed to send")
-      }
-    })
-
-    // emailjs.sendForm("service_7vz7z5i", "template_7vz7z5i", form).then(
-    //   (result) => {
-    //     console.log(result.text);
+    // fetch('http://localhost:3001/send', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(form),
+    // }).then((res) => (res.json())
+    // ).then((res) => {
+    //   console.log(res)
+    //   if (res.status == 'success') {
     //     setLoading(false);
     //     setForm({
     //       name: "",
@@ -63,12 +41,37 @@ const Contact = () => {
     //       message: "",
     //     });
     //     formRef.current.reset();
-    //   },
-    //   (error) => {
-    //     console.log(error.text);
+    //     alert("Message sent successfully")
+    //   } else if (res.status == 'fail') {
     //     setLoading(false);
+    //     setForm({
+    //       name: "",
+    //       email: "",
+    //       message: "",
+    //     });
+    //     formRef.current.reset();
+    //     alert("Message failed to send")
     //   }
-    // );
+    // })
+
+    emailjs.sendForm("service_rdz4vpe", "template_kgg3e6r", form.current, {
+      publicKey: 'E4RVxhSvXmaNImLgQ',
+    }).then(
+      (result) => {
+        console.log(result.text);
+        setLoading(false);
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+        formRef.current.reset();
+      },
+      (error) => {
+        console.log(error.text);
+        setLoading(false);
+      }
+    );
   };
 
   return (
