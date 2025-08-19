@@ -54,7 +54,7 @@ const Contact = () => {
     //   }
     // })
 
-    emailjs.sendForm("service_rdz4vpe", "template_kgg3e6r", form.current, {
+    emailjs.sendForm("service_rdz4vpe", "template_kgg3e6r", form, {
       publicKey: 'E4RVxhSvXmaNImLgQ',
     }).then(
       (result) => {
