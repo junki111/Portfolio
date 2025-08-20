@@ -33,6 +33,8 @@ import tripguide from './tripguide.png'
 import character from './character.png'
 import blackjack from './blackjack.png'
 import finalproject from './finalproject.png'
+import zambiahr from './ZambiaHR.png'
+import valuebets from './valuebets.png'
 
 export {
     logo,
@@ -67,4 +69,6 @@ export {
     character,
     blackjack,
     finalproject,
+    zambiahr,
+    valuebets,
 }

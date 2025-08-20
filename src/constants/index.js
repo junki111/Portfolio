@@ -18,6 +18,8 @@ import {
     threejs,
     character,
     finalproject,
+    zambiahr,
+    valuebets,
 } from '../assets'
 
 export const navLinks = [
@@ -247,8 +249,29 @@ const projects = [
                 color: 'green-text-gradient',
             },
         ],
-        image: character,
+        image: valuebets,
         source_code_link: 'https://github.com/junki111/betting_portal',
+    },
+    {
+        name: 'Zambia HR System',
+        description:
+            'A human resource management system for a company in Zambia. The system allows the company to manage their employees and payroll.',
+        tags: [
+            {
+                name: 'Laravel',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'Javascript',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'PostgreSQL',
+                color: 'pink-text-gradient',
+            },
+        ],
+        image: zambiahr,
+        source_code_link: 'https://github.com/junki111/hr_zambia'
     },
 ]
 
