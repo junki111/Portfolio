@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { ReactTyped } from 'react-typed'
 
 import { styles } from '../styles'
 import { ComputersCanvas } from './canvas'
@@ -22,9 +23,29 @@ const Hero = () => {
                         <span className='text-[#915eff]'>Jun Ki</span>
                     </h1>
                     <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-                        I am a Full Stack Developer,{' '}
-                        <br className='sm:block hidden' />
-                        and a Game Developer.
+                        <span>I am a </span>
+                        <motion.span
+                            animate={{
+                                color: ["#915eff", "#22d3ee", "#f43f5e", "blue-text-gradient", "#10b981"]
+                            }}
+                            transition={{
+                                duration: 8,
+                                repeat: Infinity,
+                                repeatType: "mirror",
+                            }}
+                        >
+                            <ReactTyped
+                                strings={[
+                                    'Full Stack Developer',
+                                    'Game Developer',
+                                ]}
+                                typeSpeed={50}
+                                backSpeed={30}
+                                backDelay={1500}
+                                loop
+                                className='text-[#915eff] font-semibold'
+                            />
+                        </motion.span>
                     </p>
                     {/* === Animated CV Download Button === */}
                     <motion.a
