@@ -20,6 +20,9 @@ import {
     finalproject,
     zambiahr,
     valuebets,
+    aologo,
+    knhlogo,
+    unreallogo,
 } from '../assets'
 
 export const navLinks = [
@@ -95,7 +98,7 @@ const experiences = [
     {
         title: 'ICT Technician Attachment',
         company_name: 'Kenyatta National Hospital',
-        icon: starbucks,
+        icon: knhlogo,
         iconBg: '#383E56',
         date: 'November 2019 - January 2020',
         points: [
@@ -108,7 +111,7 @@ const experiences = [
     {
         title: 'Unreal Engine Game Developer',
         company_name: 'Self-Employed',
-        icon: tesla,
+        icon: unreallogo,
         iconBg: '#E6DEDD',
         date: 'June 2022 - Present',
         points: [
@@ -126,7 +129,7 @@ const experiences = [
     {
         title: 'Software Developer',
         company_name: 'AO Technologies Ltd',
-        icon: shopify,
+        icon: aologo,
         iconBg: '#383E56',
         date: 'May 2021 - Present',
         points: [

@@ -35,6 +35,9 @@ import blackjack from './blackjack.png'
 import finalproject from './finalproject.png'
 import zambiahr from './ZambiaHR.png'
 import valuebets from './valuebets.png'
+import aologo from './aologo.png'
+import knhlogo from './knhlogo.png'
+import unreallogo from './unreallogo.png'
 
 export {
     logo,
@@ -71,4 +74,7 @@ export {
     finalproject,
     zambiahr,
     valuebets,
+    aologo,
+    knhlogo,
+    unreallogo,
 }
