@@ -1,9 +1,28 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTheme } from '../context/ThemeContext'
+import { Sun, Moon } from 'lucide-react'
 
 import { styles } from '../styles'
 import { navLinks } from '../constants'
 import { junki, menu, close } from '../assets'
+
+const ThemeToggle = () => {
+    const { theme, toggleTheme } = useTheme()
+
+    return (
+        <button
+            onClick={toggleTheme}
+            className='p-2 rounded-full bg-gray-200 dark:bg-gray-800 transition'
+        >
+            {theme === 'dark' ? (
+                <Sun className='w-6 h-6 text-yellow-500' />
+            ) : (
+                <Moon className='w-6 h-6 text-gray-800' />
+            )}
+        </button>
+    )
+}
 
 const Navbar = () => {
     const [active, setActive] = useState('')
@@ -11,7 +30,7 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+            className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-white dark:bg-gray-900 transition-colors duration-300`}
         >
             <div className='flex items-center justify-between w-full max-w-7xl mx-auto'>
                 <Link
@@ -82,6 +101,7 @@ const Navbar = () => {
                                 </li>
                             ))}
                         </ul>
+                        <ThemeToggle />
                     </div>
                 </div>
             </div>
