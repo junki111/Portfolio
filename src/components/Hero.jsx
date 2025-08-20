@@ -28,7 +28,7 @@ const Hero = () => {
                     </p>
                     {/* === Animated CV Download Button === */}
                     <motion.a
-                        href="/JunKICV2025.pdf"
+                        href={`${import.meta.env.BASE_URL}/JunKICV2025.pdf`}
                         download
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
