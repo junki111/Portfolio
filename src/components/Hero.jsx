@@ -9,14 +9,14 @@ const Hero = () => {
         <section className='relative w-full h-screen mx-auto' id='heroSection'>
             <motion.div
                 variants={fadeIn('top', 'spring', 0.1, 1)}
-                className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 z-10`}
+                className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 z-10 pointer-events-none`}
             >
-                <div className='flex flex-col items-center justify-center mt-5'>
+                <div className='flex flex-col items-center justify-center mt-5 pointer-events-none'>
                     <div className='w-5 h-5 rounded-full bg-[#915eff]' />
                     <div className='w-1 sm:h-80 h-40 violet-gradient' />
                 </div>
 
-                <div>
+                <div className="pointer-events-auto">
                     <h1 className={`${styles.heroHeadText} text-white`}>
                         Hello. I'm{' '}
                         <span className='text-[#915eff]'>Jun Ki</span>
@@ -28,7 +28,7 @@ const Hero = () => {
                     </p>
                     {/* === Animated CV Download Button === */}
                     <motion.a
-                        href="/JunKiCV2025.pdf"
+                        href="/JunKICV2025.pdf"
                         download
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

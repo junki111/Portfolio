@@ -248,6 +248,10 @@ const projects = [
                 name: 'Javascript',
                 color: 'green-text-gradient',
             },
+            {
+                name: 'SQLServer',
+                color: 'pink-text-gradient',
+            },
         ],
         image: valuebets,
         source_code_link: 'https://github.com/junki111/betting_portal',
