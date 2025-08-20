@@ -26,6 +26,19 @@ const Hero = () => {
                         <br className='sm:block hidden' />
                         and a Game Developer.
                     </p>
+                    {/* === Animated CV Download Button === */}
+                    <motion.a
+                        href="/assets/JunKi-CV.pdf"
+                        download
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.5 }}
+                        whileHover={{ scale: 1.1, boxShadow: "0px 0px 15px #915eff" }}
+                        whileTap={{ scale: 0.95 }}
+                        className="mt-6 inline-block px-6 py-3 bg-[#915eff] text-white font-semibold rounded-xl shadow-lg cursor-pointer"
+                    >
+                        Download CV
+                    </motion.a>
                 </div>
             </motion.div>
             <ComputersCanvas />

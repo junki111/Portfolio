@@ -7,6 +7,7 @@ import { github } from '../assets'
 import { SectionWrapper } from '../hoc'
 import { fadeIn, textVariant } from '../utils/motion'
 import { projects } from '../constants'
+import PropTypes from 'prop-types'
 
 const ProjectCard = ({
     index,
@@ -32,7 +33,7 @@ const ProjectCard = ({
                 <img
                     src={image}
                     alt={name}
-                    className='w-full h-full object-cover rounded-2xl'
+                    className='w-full h-full object-contain rounded-2xl'
                 />
                 <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
                     <div
@@ -63,6 +64,19 @@ const ProjectCard = ({
         </Tilt>
     </motion.div>
 )
+ProjectCard.propTypes = {
+    index: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            color: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+    image: PropTypes.string.isRequired,
+    source_code_link: PropTypes.string.isRequired,
+}
 
 const Works = () => {
   return (
