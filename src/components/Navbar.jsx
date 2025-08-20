@@ -71,6 +71,7 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
+                <ThemeToggle />
                 <div className='sm:hidden flex flex-1 justify-end items-center'>
                     <img
                         src={toggle ? close : menu}
@@ -101,7 +102,6 @@ const Navbar = () => {
                                 </li>
                             ))}
                         </ul>
-                        <ThemeToggle />
                     </div>
                 </div>
             </div>
