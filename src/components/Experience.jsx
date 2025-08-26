@@ -1,4 +1,3 @@
-import React from "react";
 import { SectionWrapper } from "../hoc";
 import {
   VerticalTimeline,
@@ -12,6 +11,7 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { useTheme } from "../context/ThemeContext";
+import PropTypes from "prop-types";
 
 const ExperienceCard = ({ experience, index }) => {
   const { theme } = useTheme();
@@ -89,6 +89,16 @@ const ExperienceCard = ({ experience, index }) => {
       </ul>
     </VerticalTimelineElement>
   );
+};
+ExperienceCard.propTypes = {
+  experience: PropTypes.shape({
+    date: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    company_name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    points: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 const Experience = () => {

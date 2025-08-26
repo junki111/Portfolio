@@ -1,9 +1,9 @@
-import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
 
 import { styles } from "../styles";
+import PropTypes from "prop-types";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
@@ -63,6 +63,11 @@ const ServiceCard = ({ index, title, icon }) => {
       </motion.div>
     </Tilt>
   );
+};
+ServiceCard.propTypes = {
+  index: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
 };
 
 const About = () => {
