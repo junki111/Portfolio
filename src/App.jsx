@@ -1,4 +1,5 @@
 import { HashRouter as Router } from 'react-router-dom'
+import { Toaster } from "react-hot-toast";
 
 import {
     About,
@@ -30,7 +31,8 @@ const App = () => {
         <div className="relative z-0">
           <Contact />
         </div>
-        <StarsCanvas />
+        {/* <StarsCanvas /> */}
+        <Toaster position="top-right" reverseOrder={false} />
       </div>
     </Router>
   );

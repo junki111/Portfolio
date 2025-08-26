@@ -6,6 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { slideIn, textVariant } from "../utils/motion";
 import emailjs from "@emailjs/browser";
 import { useTheme } from "../context/ThemeContext";
+import toast from "react-hot-toast";
 
 const Contact = () => {
   const { theme } = useTheme();
@@ -35,7 +36,7 @@ const Contact = () => {
     emailjs
       .sendForm(
         "service_rdz4vpe",
-        "template_kgg3e6r",
+        "template_e22e9qd",
         formRef.current,
         "E4RVxhSvXmaNImLgQ"
       )
@@ -44,10 +45,37 @@ const Contact = () => {
           setLoading(false);
           setForm({ name: "", email: "", message: "" });
           formRef.current.reset();
+
+          // 🎉 Success toast
+          toast.success("Message sent successfully!", {
+            style: {
+              background: theme === "dark" ? "#1f2937" : "#fff",
+              color: theme === "dark" ? "#fff" : "#000",
+              border:
+                theme === "dark" ? "1px solid #3b82f6" : "1px solid #f59e0b",
+            },
+            iconTheme: {
+              primary: theme === "dark" ? "#3b82f6" : "#f59e0b",
+              secondary: "#fff",
+            },
+          });
         },
         (error) => {
           console.log(error.text);
           setLoading(false);
+
+          // ❌ Error toast
+          toast.error("Something went wrong. Please try again.", {
+            style: {
+              background: theme === "dark" ? "#1f2937" : "#fff",
+              color: theme === "dark" ? "#fff" : "#000",
+              border: "1px solid red",
+            },
+            iconTheme: {
+              primary: "red",
+              secondary: "#fff",
+            },
+          });
         }
       );
   };

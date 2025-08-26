@@ -27,6 +27,7 @@
     "nodemailer": "^6.9.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.6.0",
     "react-parallax-tilt": "^1.7.304",
     "react-router-dom": "^6.14.2",
     "react-tilt": "^1.0.2",
