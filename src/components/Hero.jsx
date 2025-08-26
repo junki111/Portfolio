@@ -5,8 +5,11 @@ import { styles } from "../styles";
 // import { ComputersCanvas } from "./canvas";
 import { fadeIn } from "../utils/motion";
 import ParticlesBackground from "./ParticlesBackground";
+import { useTheme } from "../context/ThemeContext";
 
 const Hero = () => {
+  const { theme } = useTheme();
+
   return (
     <section
       className="relative w-full h-screen mx-auto bg-background-light dark:bg-background-dark transition-colors duration-300"
@@ -40,12 +43,23 @@ const Hero = () => {
 
         {/* Right Text Content */}
         <div>
-          <h1 className={`${styles.heroHeadText} text-text-light dark:text-text-dark`}>
+          <h1
+            className={`${styles.heroHeadText} text-text-light dark:text-text-dark`}
+          >
             Hello. I am{" "}
-            <span className="text-primary-light dark:text-primary-dark">Jun Ki</span>
+            <span
+              className={`
+                ${styles.heroHeadText} transition-colors duration-300
+                ${theme === "dark" ? "text-blue-500" : "text-amber-500"}
+              `}
+            >
+              Jun Ki
+            </span>
           </h1>
 
-          <p className={`${styles.heroSubText} mt-2 text-secondary-dark dark:text-secondary-light`}>
+          <p
+            className={`${styles.heroSubText} mt-2 text-secondary-dark dark:text-secondary-light`}
+          >
             <span>I am a </span>
             <motion.span
               animate={{
@@ -77,10 +91,21 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             whileHover={{
               scale: 1.1,
-              boxShadow: "0px 0px 15px rgba(29,78,216,0.7)",
+              boxShadow:
+                theme === "dark"
+                  ? "0px 0px 15px rgba(59,130,246,0.6), 0px 0px 25px rgba(59,130,246,0.3)" // blue glow in dark
+                  : "0px 0px 15px rgba(251,191,36,0.6), 0px 0px 25px rgba(251,191,36,0.3)", // amber glow in light
             }}
             whileTap={{ scale: 0.95 }}
-            className="mt-6 inline-block px-6 py-3 bg-primary-light dark:bg-primary-dark text-white font-semibold rounded-xl shadow-lg cursor-pointer transition-colors"
+            className={`
+              mt-6 inline-block px-6 py-3 font-semibold rounded-xl shadow-lg cursor-pointer
+              transition-colors duration-700
+              ${
+                theme === "dark"
+                  ? "bg-blue-600 text-white hover:bg-blue-700" // dark mode button → blue
+                  : "bg-amber-400 text-black hover:bg-amber-500"
+              } 
+            `}
           >
             Download CV
           </motion.a>
@@ -91,7 +116,10 @@ const Hero = () => {
       <ComputersCanvas /> */}
 
       {/* Scroll Indicator */}
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center" id="transitionDot">
+      <div
+        className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center"
+        id="transitionDot"
+      >
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary-dark dark:border-secondary-light flex justify-center items-start p-2">
             <motion.div
