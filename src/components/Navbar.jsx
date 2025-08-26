@@ -28,7 +28,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full fixed top-0 z-20 bg-background-light dark:bg-background-dark shadow-lg transition-colors duration-300">
+    <nav className="w-full fixed top-0 z-30 bg-background-light dark:bg-background-dark shadow-lg transition-colors duration-300">
       <div className="flex items-center justify-between w-full max-w-7xl mx-auto px-6 py-4">
         {/* Logo */}
         <Link

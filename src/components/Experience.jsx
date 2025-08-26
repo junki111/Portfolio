@@ -3,7 +3,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -103,11 +103,17 @@ ExperienceCard.propTypes = {
 
 const Experience = () => {
   const { theme } = useTheme();
+  const { scrollY } = useScroll();
+
+  // Parallax scroll values
+  const y = useTransform(scrollY, [0, 100], [0, -30]); // bigger movement
+  const x = useTransform(scrollY, [0, 100], [0, 40]);   // horizontal shift
 
   return (
     <>
       <motion.div variants={textVariant()}>
         <motion.p
+          style={{ y, x }}
           className={`${styles.sectionSubText} ${
             theme === "dark" ? "text-gray-400" : "text-gray-600"
           }`}
@@ -115,6 +121,7 @@ const Experience = () => {
           What I have done so far
         </motion.p>
         <motion.h2
+          style={{ y, x }}
           className={`text-4xl sm:text-5xl font-extrabold mb-2 bg-gradient-to-r bg-clip-text text-transparent 
               ${
                 theme === "dark"

@@ -1,5 +1,5 @@
 import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import { styles } from "../styles";
 import { github } from "../assets";
@@ -117,25 +117,34 @@ ProjectCard.propTypes = {
 
 const Works = () => {
   const { theme } = useTheme();
+  const { scrollY } = useScroll();
+
+  // Parallax scroll values
+  const y = useTransform(scrollY, [0, 100], [0, -30]); // bigger movement
+  const x = useTransform(scrollY, [0, 100], [0, 40]); // horizontal shift
 
   return (
     <>
-      {/* Section Heading */}
       <motion.div variants={textVariant()}>
-        <p
+        <motion.p
+          style={{ y, x }}
           className={`${styles.sectionSubText} ${
-            theme === "dark" ? "text-gray-400" : "text-gray-500"
+            theme === "dark" ? "text-gray-400" : "text-gray-600"
           }`}
         >
-          My Projects
-        </p>
-        <h2
-          className={`${styles.sectionHeadText} ${
-            theme === "dark" ? "text-white" : "text-gray-900"
-          }`}
+          Some of my works
+        </motion.p>
+        <motion.h2
+          style={{ y, x }}
+          className={`text-4xl sm:text-5xl font-extrabold mb-2 bg-gradient-to-r bg-clip-text text-transparent 
+              ${
+                theme === "dark"
+                  ? "from-violet-400 via-fuchsia-500 to-indigo-400"
+                  : "from-purple-600 via-pink-500 to-indigo-600"
+              } animate-gradient`}
         >
           Projects
-        </h2>
+        </motion.h2>
       </motion.div>
 
       {/* Section Description */}
