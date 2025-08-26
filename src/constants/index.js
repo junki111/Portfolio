@@ -136,7 +136,7 @@ const experiences = [
             'Creating high performing software solution for firms in the Fintech space and beyond, with integration with bio-authentication systems for increased security.',
             'Database Management using Microsoft SQL Server.',
             'Responsive Web Development using Php, Laravel, ReactJs and vanilla Javascript.',
-            'Android application development using Java.',
+            'Android application development using Java and ReactNative.',
             'Backend development using Java Vertx.',
             'Project planning and management as Project lead on some of the solutions.',
             'Software testing and debugging of existing company solutions.',
