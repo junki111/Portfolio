@@ -33,8 +33,8 @@ const ServiceCard = ({ index, title, icon }) => {
           scale: 1.08,
           boxShadow:
             theme === "dark"
-              ? "0px 0px 20px rgba(139,92,246,0.7)"
-              : "0px 0px 20px rgba(99,102,241,0.5)",
+            ? "0 0 25px rgba(59,130,246,0.3)"
+            : "0 0 25px rgba(251,191,36,0.3)",
         }}
       >
         <div
