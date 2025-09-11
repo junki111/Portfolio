@@ -23,12 +23,13 @@ const ServiceCard = ({ index, title, icon }) => {
     >
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className={`w-full rounded-[20px] p-[1px] shadow-card 
+        className={`w-full rounded-[20px] p-[1px]
           ${
             theme === "dark"
               ? "bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600"
               : "bg-gradient-to-b from-gray-200 via-indigo-200 to-purple-300"
           }`}
+        transition={{ type: "spring", stiffness: 200, damping: 15 }}
         whileHover={{
           scale: 1.08,
           boxShadow:
