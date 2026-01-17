@@ -24,6 +24,10 @@ import {
     knhlogo,
     unreallogo,
     laravel,
+    java,
+    linux,
+    reactnative,
+    nodejs,
 } from '../assets'
 
 export const navLinks = [
