@@ -23,6 +23,7 @@ import {
     aologo,
     knhlogo,
     unreallogo,
+    laravel,
 } from '../assets'
 
 export const navLinks = [
@@ -61,16 +62,28 @@ const services = [
 
 const technologies = [
     {
-        name: 'HTML 5',
-        icon: html,
-    },
-    {
-        name: 'CSS 3',
-        icon: css,
-    },
-    {
         name: 'JavaScript',
         icon: javascript,
+    },
+    {
+        name: 'NodeJs',
+        icon: nodejs,
+    },
+    {
+        name: 'Laravel',
+        icon: laravel,
+    },
+    {
+        name: 'Java',
+        icon: java,
+    },
+    {
+        name: 'Linux',
+        icon: linux,
+    },
+    {
+        name: 'React Native',
+        icon: reactnative,
     },
     {
         name: 'React JS',

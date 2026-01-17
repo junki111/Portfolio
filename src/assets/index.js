@@ -21,6 +21,10 @@ import redux from './tech/redux.png'
 import tailwind from './tech/tailwind.png'
 import typescript from './tech/typescript.png'
 import threejs from './tech/threejs.svg'
+import java from './tech/JavaIcon.png'
+import laravel from './tech/LaravelIcon.png'
+import linux from './tech/LinuxIcon.png'
+import reactnative from './tech/ReactNativeIcon.png'
 
 import meta from './company/meta.png'
 import shopify from './company/shopify.png'
@@ -62,6 +66,10 @@ export {
     tailwind,
     typescript,
     threejs,
+    java,
+    laravel,
+    linux,
+    reactnative,
     meta,
     shopify,
     starbucks,
