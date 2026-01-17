@@ -27,7 +27,6 @@ import {
     java,
     linux,
     reactnative,
-    nodejs,
 } from '../assets'
 
 export const navLinks = [
@@ -88,10 +87,6 @@ const technologies = [
     {
         name: 'React Native',
         icon: reactnative,
-    },
-    {
-        name: 'React JS',
-        icon: reactjs,
     },
     {
         name: 'Tailwind CSS',
