@@ -107,57 +107,49 @@ const technologies = [
 ]
 
 const experiences = [
-    {
-        title: 'ICT Technician Attachment',
-        company_name: 'Kenyatta National Hospital',
-        icon: knhlogo,
-        iconBg: '#383E56',
-        date: 'November 2019 - January 2020',
-        points: [
-            'Networking responsibilities which involves activities like cable running from server to machines, clipping of rj45 for various machines, troubleshooting of issues in the network.',
-            'Faulty hardware repair including printers and old CPUs, and hardware maintenance of machines in use for optimal performance.',
-            'Working with Microsoft excel for data entry and performing column calculations as required.',
-            'Assisting the sick and needy within the organization to the best of my abilities.',
-        ],
-    },
-    {
-        title: 'Unreal Engine Game Developer',
-        company_name: 'Self-Employed',
-        icon: unreallogo,
-        iconBg: '#E6DEDD',
-        date: 'June 2022 - Present',
-        points: [
-            'Creating landscapes from scratch using custom materials and assets from Quixel Bridge megascans.',
-            'Working with vectors and trigonometry to perform complex calculations on various actors in the world, such as creating hovering behavior on items.',
-            'Importing assets from other projects such as characters and meshes to use in my project.',
-            'Use of control rigs to create accurate foot and hand placement in various situations.',
-            'Working with animations and animation montages and also importing animations from external sources and retargeting them to various character meshes.',
-            'Working with collision and overlaps to create custom events such as mission completion, item pickups and damage to enemies.',
-            'Working with the chaos physics system to simulate breakage and the Niagara particle system for colorful Visual effects.',
-            'Working with procedural systems to speed up the level creation system.',
-            'Working with enemy AI and improving upon them by using root motion to give them a higher chance of landing attacks.',
-        ],
-    },
-    {
-        title: 'Software Developer',
-        company_name: 'AO Technologies Ltd',
-        icon: aologo,
-        iconBg: '#383E56',
-        date: 'May 2021 - Present',
-        points: [
-            'Creating high performing software solution for firms in the Fintech space and beyond, with integration with bio-authentication systems for increased security.',
-            'Database Management using Microsoft SQL Server.',
-            'Responsive Web Development using Php, Laravel, ReactJs and vanilla Javascript.',
-            'Android application development using Java and ReactNative.',
-            'Backend development using Java Vertx.',
-            'Project planning and management as Project lead on some of the solutions.',
-            'Software testing and debugging of existing company solutions.',
-            'Documentation of software development policies that will help govern how the company will work.',
-            'Version control using Git for all the projects.',
-            'Containerization of applications using Docker.',
-        ],
-    },
-]
+  {
+    title: "Tech Lead / Software Developer",
+    company_name: "AO Technologies Ltd",
+    icon: aologo,
+    iconBg: "#383E56",
+    date: "May 2021 - Present",
+    points: [
+      "Architected and led the development of a high-availability digital lending ecosystem, scaling to 85,000+ customers and managing a loan book of nearly half a billion KES.",
+      "Engineered a reactive backend using Java (8/17) and Vert.x (3/4) with SQL Server and MongoDB, ensuring zero-lag performance during peak financial reporting periods.",
+      "Developed a high-performance AML & Compliance SaaS featuring a fuzzy search engine across four global data sources for real-time compliance flagging.",
+      "Integrated complex M-Pesa automated disbursement and repayment systems, achieving 100% accounting accuracy through real-time ERP journal entries.",
+      "Designed a modular suite for loan origination and automated debt collection, significantly improving recovery rates through automated trigger systems.",
+      "Lead project lifecycles including containerization with Docker, version control via Git, and documentation of robust software development policies.",
+    ],
+  },
+  {
+    title: "Unreal Engine Game Developer",
+    company_name: "Freelance",
+    icon: unreallogo,
+    iconBg: "#E6DEDD",
+    date: "June 2022 - Present",
+    points: [
+      "Developing high-fidelity 3D environments and landscapes using Quixel Megascans, custom shaders, and procedural generation systems to accelerate level design.",
+      "Implementing complex AI behavior trees and enhancing NPC realism using root motion and advanced physics-based movement systems.",
+      "Utilizing vectors and trigonometry for custom actor behaviors, including complex hovering mechanics and interactive world objects.",
+      "Leveraging the Chaos physics system for environment destruction and Niagara particle systems for high-quality visual effects (VFX).",
+      "Optimizing character animations through control rigs for accurate IK placement and retargeting external assets to custom meshes.",
+    ],
+  },
+  {
+    title: "ICT Technician Intern",
+    company_name: "Kenyatta National Hospital",
+    icon: knhlogo,
+    iconBg: "#383E56",
+    date: "November 2019 - January 2020",
+    points: [
+      "Optimized large-scale hospital network infrastructure, contributing to a 40% reduction in system downtime through proactive troubleshooting and maintenance.",
+      "Managed critical hardware lifecycles, including the repair and optimization of enterprise-level CPUs and printing peripherals for essential medical staff.",
+      "Executed network scaling tasks including CAT6 cable deployment, RJ45 termination, and server-to-workstation configuration.",
+      "Supported data integrity and administrative efficiency by performing complex data entry and calculation tasks using Microsoft Excel.",
+    ],
+  },
+];
 
 const testimonials = [
     {
